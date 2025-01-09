@@ -15,11 +15,13 @@ function calculateTotal() {
 
         // Create a single cell to display the total price
         const totalCell = document.createElement("td");
+	    totalCell.id = "ans";
         totalCell.colSpan = 2; // This spans across two columns
         totalCell.textContent = `Total Price: ₹${total}`;
 
         // Add the new cell to the row and append the row to the table
         totalRow.appendChild(totalCell);
+	    const table = document.getElementById("groceryTable");
         table.appendChild(totalRow);
 }
 
