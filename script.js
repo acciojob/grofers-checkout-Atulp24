@@ -1,6 +1,7 @@
 function calculateTotal() {
         // Get all price elements from the table
         const priceElements = document.querySelectorAll(".price");
+	    const table = document.getElementById("groceryTable");
 
         let total = 0;
 
@@ -10,7 +11,6 @@ function calculateTotal() {
         });
 
         // Create a new row for the total
-        const table = document.getElementById("groceryTable");
         const totalRow = document.createElement("tr");
 
         // Create a single cell to display the total price
@@ -21,7 +21,6 @@ function calculateTotal() {
 
         // Add the new cell to the row and append the row to the table
         totalRow.appendChild(totalCell);
-	    const table = document.getElementById("groceryTable");
         table.appendChild(totalRow);
 }
 
